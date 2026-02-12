@@ -1,0 +1,25 @@
+.venv/
+venv/
+env/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.ipynb_checkpoints/
+
+.Python
+python.env
+
+# Conda environments
+.conda/
+.pixi/
+
+# Local editor/OS files
+.vscode/
+.DS_Store
+Thumbs.db
