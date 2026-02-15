@@ -1,3 +1,0 @@
-# This script uses the Python API embedded in 3D Slicer (desktop app),
-# not the unrelated `slicer` package from PyPI.
-# No pip dependencies are required for automated_loading.py.
