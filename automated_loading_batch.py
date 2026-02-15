@@ -147,7 +147,7 @@ def class_color_rgb(class_name):
 
     digest = hashlib.md5(normalized.encode("utf-8")).hexdigest()
     hue = int(digest[:8], 16) / 0xFFFFFFFF
-    saturation = 0.75
+    saturation = 0.90
     value = 0.90
     return colorsys.hsv_to_rgb(hue, saturation, value)
 
