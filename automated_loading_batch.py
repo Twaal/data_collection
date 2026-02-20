@@ -165,14 +165,11 @@ def binarize_mask_array(mask_array):
         else:
             collapsed = np.max(mask_array, axis=-1)
 
-    unique_values, counts = np.unique(collapsed, return_counts=True)
-    if unique_values.size <= 1:
-        return np.zeros_like(collapsed, dtype=np.uint8)
-    elif unique_values.size == 2:
-        background_value = unique_values[np.argmax(counts)]
-        return (collapsed != background_value).astype(np.uint8)
-    else:
-        return (collapsed > 0).astype(np.uint8)
+    # Always treat 255 as class, 0 as background
+    # If mask is not 0/255, threshold at 128
+    if collapsed.dtype != np.uint8:
+        collapsed = collapsed.astype(np.uint8)
+    return (collapsed == 255).astype(np.uint8)
 
 
 # ---------------------------------------------------------------------------
