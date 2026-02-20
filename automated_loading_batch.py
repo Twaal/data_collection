@@ -250,7 +250,7 @@ def configure_segmentation_display_2d(display_node):
         display_node.SetAllSegmentsVisibility2D(True)
     else:
         display_node.SetAllSegmentsVisibility(True)
-    display_node.SetOpacity2DFill(0.35)
+    display_node.SetOpacity2DFill(0.65)
     display_node.SetOpacity2DOutline(1.0)
 
 
